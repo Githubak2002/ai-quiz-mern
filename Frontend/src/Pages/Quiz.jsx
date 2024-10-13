@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer } from "react";
-import Loading from "../components/QuizComponents/Loading";
-import Error from "../components/QuizComponents/Error";
-import Question from "../components/QuizComponents/Question";
-import Finish from "../components/QuizComponents/Finish";
+import Loading from "../Components/QuizComponents/Loading"
+import Error from "../Components/QuizComponents/Error";
+import Question from "../Components/QuizComponents/Question";
+import Finish from "../Components/QuizComponents/Finish";
 
 const backend_base_url =
   import.meta.env.MODE === "development"
