@@ -108,8 +108,41 @@ QuizifyAI — a quiz web application built using the MERN stack (MongoDB, Expres
 
 ---
 
-## Zustand Store Usage
+# Zustand Store Usage
 
-- **Updating State**:
-  ```javascript
-  useAuthStore.setState({ forgotPassPopup: true });
+Zustand is a small, fast, and scalable state management solution for React applications. It provides a simple API for managing global state with minimal boilerplate.
+
+## Key Points
+
+### Creating a Store
+To create a global state store, use the `create` function from Zustand:
+```javascript
+import create from 'zustand';
+
+const useCountStore = create((set) => ({
+  count: 0,
+  increaseCount: () => set((state) => ({ count: state.count + 1 })),
+}));
+
+```
+
+### Reading a state
+```javascript
+const count = useCountStore((state) => state.count);
+```
+
+### Updating a state
+Update the state using setState
+```javascript
+useCountStore.setState({ count: 0 });
+```
+
+Use "setState" when you want to update the state - Example -
+```javascript
+useAuthStore.setState({ forgotPassPopup: true });
+```
+  
+Use the "selector function" when you want to read state values - Example - 
+```javascript
+const isVisible = useAuthStore((state) => state.forgotPassPopup);
+```
