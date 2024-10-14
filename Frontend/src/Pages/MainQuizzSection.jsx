@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Quiz from "./Quiz";
 
 const backend_base_url =
@@ -30,23 +30,30 @@ const MainQuizzSection = () => {
   return (
     <>
       {!quizTitle ? (
-        <main className="flexCenter min-h-[77vh] flex-col gap-y-6">
-          <h2 className="font1 text-3xl mb-5">All Quiz</h2>
+        <main className="relative flexCenter min-h-[77vh] flex-col gap-y-6 overflow-hidden">
 
-          <main className="flex justify-center flex-wrap gap-6 px-4 mx-auto max-w-[890px]">
+          {/* <div className="absolute top-1/2 right-1/2 transform translate-x-1/2 translate-y-[-50%] rounded-full h-[400px] w-[400px] bg-purple-500 blur-[100px] filter opacity-70"></div> */}
+          <div className="absolute -z-20 top-0 right-0 transform translate-x-1/2 translate-y-[-40%] rounded-full h-[400px] md:h-[800px] w-[400px] md:w-[800px] bg-blue-300 blur-[100px] filter opacity-70"></div>
+          <div className="absolute -z-20 bottom-0 left-0 transform -translate-x-1/2 translate-y-[40%] rounded-full h-[400px] md:h-[800px] w-[400px] md:w-[800px] bg-purple-300 blur-[100px] filter opacity-70"></div>
+
+
+          <h2 className="font text-3xl mb-5">All Quiz</h2>
+
+          <main className="flex justify-center flex-wrap gap-x-6 gap-y-10 px-4 mx-auto max-w-[576px]">
             {allQuizTitle.map((title, index) => (
               <button
                 key={index}
                 onClick={() => setQuizTitle(title)} // Update quiz title here
-                className="hover-cursorCSS p-3 bg-slate-50 rounded-xl"
+                // className="hover-cursorCSS p-3 bg-transparent blur-2xl rounded-xl"
+                className="hover-cursorCSS hover:scale-110 transition-all p-3 bg-[#ffffff2e] bg-transparent border border-black "
               >
-                <span>{title}</span>
+                <span className="text-black">{title}</span>
               </button>
             ))}
           </main>
-          <button className="hover-cursorCSS font1 scaling mt-8">
-            Generate a new Quiz using AI
-          </button>
+          <Link to="/quiz-with-ai" className="hover-cursorCSS font3 scaling mt-8 ">
+            Generate a new Quiz using AI → 
+          </Link>
         </main>
       ) : (
         <Quiz topic={quizTitle} /> // Pass the correct prop

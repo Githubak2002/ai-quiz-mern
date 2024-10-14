@@ -49,12 +49,12 @@ const Profile = () => {
   // },[user])
 
   return (
-    <section className=" flexCenter min-h-[77vh] px-5">
+    <section className=" flexCenter min-h-[77vh] px-5 bg-slate-100">
 
-      <main className="border-2 border-slate-200 rounded-xl min-w-96 ">
+      <main className="border-2 border-slate-200 rounded-xl min-w-96 px-4 bg-[#ffffffb3]">
 
         <div className="flexBetween border-b-2 border-slate-200 p-4">
-          <h2 className="text-xl font-bold font1">Profile</h2>
+          <h2 className="text-xl font-bold font">Profile</h2>
           <img src={profile} alt="img" className=" max-h-20" />
         </div>
 

@@ -12,6 +12,7 @@ import { useAuthStore } from "../store/authStore";
 import { Children, useEffect } from "react";
 import Quiz from "./Pages/Quiz";
 import MainQuizzSection from "./Pages/MainQuizzSection";
+import GenerateQuizWithAI from "./Pages/GenerateQuizWithAI";
 
 function App() {
 
@@ -73,8 +74,9 @@ function App() {
             </ProtectedRoute> 
             } />
 
+          <Route path="/quiz-with-ai" element={<GenerateQuizWithAI />} />
           {/* <Route path="/allquiz" element={<MainQuizzSection />} /> */}
-          <Route path="/quiz" element={<Quiz />} />
+          {/* <Route path="/quiz" element={<Quiz />} /> */}
 
           {/* ==== all other routes will naviagte to home page (*) ==== */}
           <Route path="*" element={<Navigate to="/" replace />} />
