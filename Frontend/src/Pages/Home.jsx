@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import BlurFade from "../Components/magicui/BlurFade";
 import Features from "../Components/Features";

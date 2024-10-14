@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Quiz from "./Quiz";
+import { useAuthStore } from "../../store/authStore";
+import toast from "react-hot-toast";
 
 const backend_base_url =
   import.meta.env.MODE === "development"
@@ -9,6 +11,10 @@ const backend_base_url =
     : "/api/quiz";
 
 const MainQuizzSection = () => {
+
+  const { isUserVerified } = useAuthStore();
+  // console.log(isUserVerified);
+  
   const navigate = useNavigate();
   const [allQuizTitle, setAllQuizTitle] = useState([]);
   const [quizTitle, setQuizTitle] = useState("");
@@ -26,6 +32,16 @@ const MainQuizzSection = () => {
 
     fetchQuizTitles(); // Call the async function
   }, []); 
+
+  function generateQuizWithAi (e){
+    e.preventDefault();
+    if(!isUserVerified){
+      toast.error("Please verify your email!")
+      navigate('/profile');
+    }
+    else
+      navigate('/quiz-with-ai')
+  }
 
   return (
     <>
@@ -45,15 +61,15 @@ const MainQuizzSection = () => {
                 key={index}
                 onClick={() => setQuizTitle(title)} // Update quiz title here
                 // className="hover-cursorCSS p-3 bg-transparent blur-2xl rounded-xl"
-                className="hover-cursorCSS hover:scale-110 transition-all p-3 bg-[#ffffff2e] bg-transparent border border-black "
+                className="hover-cursorCSS hover:scale-110 transition-all p-3 bg-transparent border border-black "
               >
                 <span className="text-black">{title}</span>
               </button>
             ))}
           </main>
-          <Link to="/quiz-with-ai" className="hover-cursorCSS font3 scaling mt-8 ">
+          <button onClick={generateQuizWithAi} className="hover-cursorCSS font3 scaling mt-8 ">
             Generate a new Quiz using AI → 
-          </Link>
+          </button>
         </main>
       ) : (
         <Quiz topic={quizTitle} /> // Pass the correct prop

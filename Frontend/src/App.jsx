@@ -33,12 +33,24 @@ function App() {
     return children;
   }
 
+  // === is user authenticated ===
   const ProtectedRoute = ({children}) => {
     const {isAuthenticated} = useAuthStore();
     if(!isAuthenticated)
       return <Navigate to='/login' replace />
     return children;
   }
+
+  // === is user verified ===
+  const ProtectedRouteVerified = ({children}) => {
+    const {isUserVerified} = useAuthStore();
+    if(!isUserVerified)
+      return <Navigate to='/profile' replace />
+    return children;
+  }
+
+
+
 
   return (
     <section className="mx-auto max-w-[1440px]">
@@ -74,7 +86,14 @@ function App() {
             </ProtectedRoute> 
             } />
 
-          <Route path="/quiz-with-ai" element={<GenerateQuizWithAI />} />
+
+          <Route path="/quiz-with-ai" element={
+            <ProtectedRouteVerified>
+              <GenerateQuizWithAI />
+            </ProtectedRouteVerified> 
+          } />
+
+          {/* <Route path="/quiz-with-ai" element={<GenerateQuizWithAI />} /> */}
           {/* <Route path="/allquiz" element={<MainQuizzSection />} /> */}
           {/* <Route path="/quiz" element={<Quiz />} /> */}
 
