@@ -6,3 +6,39 @@ TODO
  - User can like others images
  - Insta grid to show images
  - 
+
+
+
+ 1. Hero Section
+Catchy Headline: A brief, impactful statement about your quiz platform (e.g., "Create Quizzes Effortlessly with AI").
+Subheadline: Explain the main value proposition (e.g., "Generate customized quizzes using Google Gemini's AI technology").
+Call-to-Action (CTA): A button that encourages users to start generating quizzes (e.g., "Get Started").
+2. Features Section
+Highlight Key Features:
+AI-Generated Quizzes: Explain how users can create quizzes using AI.
+Advanced Authentication: Describe the security and convenience of JWT authentication.
+User-Friendly Interface: Showcase ease of use and responsiveness.
+Customizable Questions: Allow users to customize topics, difficulty levels, and more.
+3. How It Works
+Step-by-Step Guide: Illustrate how to use the application, such as:
+Choose a topic.
+Select difficulty level.
+Generate and customize the quiz.
+Share or take the quiz.
+Visual Aids: Use icons or illustrations to make each step visually appealing.
+4. About Section
+Mission Statement: Share the purpose of your application and what you hope to achieve.
+Team Introduction: Introduce yourself or your team (if applicable) with short bios and photos.
+5. Testimonials/Reviews
+User Feedback: Add a section for testimonials from users who have found the app helpful. Include their names and possibly photos.
+6. FAQ Section
+Common Questions: Address common inquiries about using the platform, the technology behind it, and security measures with JWT.
+7. Blog/Resources
+Educational Content: Write articles about quiz-making, learning strategies, or how AI can enhance education.
+Updates and Announcements: Keep users informed about new features or improvements.
+8. Contact Section
+Contact Information: Provide a way for users to reach out for support or inquiries (email, contact form).
+Social Media Links: Include links to any relevant social media pages.
+9. Footer
+Navigation Links: Repeat essential links (About, Contact, FAQ).
+Legal Information: Include links to your privacy policy and terms of service.

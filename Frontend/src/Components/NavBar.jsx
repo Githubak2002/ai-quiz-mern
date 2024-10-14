@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-4 px-4 sm:px-8 w-full">
       <NavLink to="/" className="hover-cursorCSS text-xl font-black font">
-        LoGo
+        QuizifyAI
       </NavLink>
       <div className="flex items-center space-x-4">
         {isAuthenticated ? (

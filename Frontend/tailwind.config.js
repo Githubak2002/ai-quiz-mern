@@ -18,6 +18,16 @@ export default {
           },
         },
       },
+
+      // ==== google fonts ====
+      fontFamily: {
+        zeyada: ['Zeyada', 'cursive'],
+        space: ['Space Mono', 'monospace'],
+        playwrite: ['Playwrite GB S', 'sans-serif'],
+        blackOps: ['Black Ops One', 'cursive'],
+        raleway: ['Raleway', 'sans-serif'],
+      },
+
     },
   },
   plugins: [],

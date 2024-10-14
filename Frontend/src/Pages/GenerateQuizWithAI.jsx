@@ -61,11 +61,12 @@ const GenerateQuizWithAI = () => {
 
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700" htmlFor="numberOfQuestions">
-            Number of Questions
+            Number of Questions <span className='text-xs text-red-500'>[Max 10]</span>
           </label>
           <input
             type="number"
             id="numberOfQuestions"
+            max={10}
             value={numberOfQuestions}
             onChange={(e) => setNumberOfQuestions(e.target.value)}
             min="1"
