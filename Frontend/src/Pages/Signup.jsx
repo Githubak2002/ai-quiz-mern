@@ -27,8 +27,8 @@ const Signup = () => {
   };
 
   return (
-    <section className="flexCenter px-4 min-h-[70vh]">
-    <main className="sm:min-w-[340px] min-w-full shadow-2xl py-6 px-10 border-2 border-gray-300 mt-[5vh] rounded-xl font-bold text-sm relative overflow-hidden">
+    <section className="flexCenter px-4 min-h-[70vh] bg-slate-100">
+    <main className="sm:min-w-[340px] min-w-full shadow-2xl py-6 px-10 border-2 border-gray-300 mt-[5vh] rounded-xl font-bold text-sm relative overflow-hidden bg-white">
       {/* <BorderBeam2 /> */}
       <form onSubmit={handleSignUp}>
         <h3 className="text-center text-2xl pb-5 font-semibold  gradient-text2">Sign up</h3>

@@ -26,5 +26,4 @@ router.delete("/delete-account", verifyToken, deleteUserAccount);
 
 
 
-
 export default router;
