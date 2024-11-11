@@ -4,6 +4,9 @@ import Error from "../Components/QuizComponents/Error";
 import Question from "../Components/QuizComponents/Question";
 import Finish from "../Components/QuizComponents/Finish";
 
+// import { Progress } from "@material-tailwind/react";
+
+
 const backend_base_url =
   import.meta.env.MODE === "development"
     ? "http://localhost:8080/api/quiz"
@@ -76,17 +79,24 @@ const Quiz = ({ topic }) => {
     dispatch({ type: "start" });
   }
 
+  const progressPercentage = 50;
+
   return (
-    <section className="flex items-center flex-col gap-y-6 max-w-[650px] mx-auto sm:min-h-screen min-h-[80vh] py-10">
+    <section className="flex items-center flex-col gap-y-6 max-w-[650px] mx-auto sm:min-h-screen min-h-[80vh] py-10 ">
       <header className=" font-sans font-bold text-center sm:text-5xl text-3xl gradient-text2 pb-4">
         {topic}
       </header>
 
+
+      <div className="flexCenter rounded-xl overflow-hidden">
+
       <progress
-        className="rounded-xl h-[6px]"
+        className="h-[6px]"
         max={noOfQuest}
         value={index + Number(answer !== null)}
-      />
+        />
+      </div>
+
 
       <div className="flexBetween px-10 w-full ">
         <p>

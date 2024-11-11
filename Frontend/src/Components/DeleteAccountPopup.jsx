@@ -28,7 +28,7 @@ const DeleteAccountPopup = () => {
         <div className="flexCenter gap-x-5">
           <button
             onClick={deleteAccountHandler}
-            className={`text-white py-2 px-4 mb-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 ${isLoading ? "bg-blue-300" : "bg-blue-500"}`}
+            className={`hover-cursorCSS text-white py-2 px-4 mb-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 ${isLoading ? "bg-blue-300" : "bg-blue-500"}`}
             disabled={isLoading} 
           >
             {isLoading ? "Deleting..." : "Delete"}
@@ -36,7 +36,7 @@ const DeleteAccountPopup = () => {
 
           <button
             onClick={cancelHandler}
-            className="py-2 px-4 mb-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-500"
+            className="hover-cursorCSS py-2 px-4 mb-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-500"
           >
             Cancel
           </button>

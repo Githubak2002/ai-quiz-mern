@@ -22,7 +22,7 @@ const VerifyCode = () => {
       <main className="fixed inset-0 flexCenter bg-black bg-opacity-50 backdrop-blur-sm px-4">
         <form
           onSubmit={verifycode}
-          className="w-full max-w-sm bg-white p-6 border border-gray-300 rounded-lg shadow-lg"
+          className="w-full max-w-sm bg-white p-6 border border-gray-600 rounded-lg shadow-lg "
         >
           <h2 className="sm:text-2xl text-xl font-semibold mb-4">
             Enter the verification code
@@ -36,7 +36,7 @@ const VerifyCode = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className={`hover-cursorCSS bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500`}
             >
               Verify
             </button>

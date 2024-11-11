@@ -7,11 +7,10 @@ import { useAuthStore } from "../../store/authStore";
 
 import { IoIosLogOut } from "react-icons/io";
 
-
-const navLinkCss = "hover-cursorCSS lg:hover:scale-110 transition-all lg:hover:font-bold";
+const navLinkCss =
+  "hover-cursorCSS lg:hover:scale-110 transition-all lg:hover:font-bold";
 
 const Navbar = () => {
-
   const { logout } = useAuthStore();
   // const isAuthenticated = useAuthStore();
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
@@ -28,7 +27,7 @@ const Navbar = () => {
   //       // console.log("user is - ",user);
   //       setUser(user);
   //     } else {
-  //       setUser(null); 
+  //       setUser(null);
   //     }
   //   });
 
@@ -39,7 +38,7 @@ const Navbar = () => {
     try {
       await logout();
       navigate("/");
-        toast.success("Logged out successfully!");
+      toast.success("Logged out successfully!");
     } catch (error) {
       console.error("Error logging out:", error.message);
       toast.error("Error logging out. Please try again.");
@@ -47,6 +46,43 @@ const Navbar = () => {
   }
 
   return (
+    // <nav className="flex items-center justify-between py-4 px-4 sm:px-8 w-full">
+    //   <NavLink to="/" className="hover-cursorCSS text-xl font-black font">
+    //     QuizifyAI
+    //   </NavLink>
+    //   <div className="flex items-center space-x-4">
+    //     {isAuthenticated ? (
+    //       <div className="flex gap-x-4">
+    //         <NavLink to="/" className={navLinkCss}>
+    //           Home
+    //         </NavLink>
+    //         <NavLink to="/profile" className={navLinkCss}>
+    //           Profile
+    //         </NavLink>
+    //         <NavLink to="/allquiz" className={navLinkCss}>
+    //           Quizz
+    //         </NavLink>
+    //         <button onClick={handleLogout} className={`${navLinkCss} flexCenter gap-x-1`}>
+    //           <span>
+    //             <IoIosLogOut className="text-xl" />
+    //             {/* Logout */}
+    //           </span>
+    //         </button>
+    //       </div>
+    //     ) : (
+    //       <div className="flex gap-x-4">
+    //         <NavLink to="/login" className={navLinkCss}>
+    //           Login
+    //         </NavLink>
+    //         <NavLink to="/signup" className={navLinkCss}>
+    //           Signup
+    //         </NavLink>
+    //       </div>
+    //     )}
+    //   </div>
+
+    // </nav>
+
     <nav className="flex items-center justify-between py-4 px-4 sm:px-8 w-full">
       <NavLink to="/" className="hover-cursorCSS text-xl font-black font">
         QuizifyAI
@@ -54,34 +90,60 @@ const Navbar = () => {
       <div className="flex items-center space-x-4">
         {isAuthenticated ? (
           <div className="flex gap-x-4">
-            <NavLink to="/" className={navLinkCss}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${navLinkCss} ${isActive ? "font-bold" : ""}`
+              }
+            >
               Home
             </NavLink>
-            <NavLink to="/profile" className={navLinkCss}>
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                `${navLinkCss} ${isActive ? "font-bold" : ""}`
+              }
+            >
               Profile
             </NavLink>
-            <NavLink to="/allquiz" className={navLinkCss}>
+            <NavLink
+              to="/allquiz"
+              className={({ isActive }) =>
+                `${navLinkCss} ${isActive ? "font-bold" : ""}`
+              }
+            >
               Quizz
             </NavLink>
-            <button onClick={handleLogout} className={`${navLinkCss} flexCenter gap-x-1`}>
+            <button
+              onClick={handleLogout}
+              className={`${navLinkCss} flexCenter gap-x-1`}
+            >
               <span>
                 <IoIosLogOut className="text-xl" />
-                {/* Logout */}
               </span>
             </button>
           </div>
         ) : (
           <div className="flex gap-x-4">
-            <NavLink to="/login" className={navLinkCss}>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                `${navLinkCss} ${isActive ? "font-bold" : ""}`
+              }
+            >
               Login
             </NavLink>
-            <NavLink to="/signup" className={navLinkCss}>
+            <NavLink
+              to="/signup"
+              className={({ isActive }) =>
+                `${navLinkCss} ${isActive ? "font-bold" : ""}`
+              }
+            >
               Signup
             </NavLink>
           </div>
         )}
       </div>
-
     </nav>
   );
 };

@@ -224,7 +224,7 @@ export const resetPassController = async(req,res) => {
 	}
 }
 
-// ===== delete user account =====
+// ===== delete user account ===== TODO: test user can't be deleted
 export const deleteUserAccount = async (req, res) => {
   const id = req.userId;
   try {
@@ -238,6 +238,9 @@ export const deleteUserAccount = async (req, res) => {
   }
 }
 
+export const testUserLogin = async (req,res) => {
+  // need to update...
+}
 
 
 
