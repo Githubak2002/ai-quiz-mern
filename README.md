@@ -146,3 +146,7 @@ Use the "selector function" when you want to read state values - Example -
 ```javascript
 const isVisible = useAuthStore((state) => state.forgotPassPopup);
 ```
+<img width="1099" alt="QuizifyAI" src="https://github.com/user-attachments/assets/5d7ce235-1493-449e-81a7-a52a9fb2bb87">
+
+
+
