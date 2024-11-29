@@ -87,9 +87,9 @@ const Navbar = () => {
       <NavLink to="/" className="hover-cursorCSS text-xl font-black font">
         QuizifyAI
       </NavLink>
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-1 sm:space-x-4 text-sm">
         {isAuthenticated ? (
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-2 sm:gap-x-4">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -124,7 +124,7 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-2 sm:gap-x-4">
             <NavLink
               to="/login"
               className={({ isActive }) =>

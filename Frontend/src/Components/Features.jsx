@@ -37,7 +37,7 @@ const Features = () => {
 
   return (
     
-    <section className="py-16 px-4 bg-[#fff]">
+    <section className="py-16 px-4 bg-[#b6daeb0f]">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-medium text-center mb-12 font">
         Features
@@ -47,7 +47,7 @@ const Features = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`relative p-6 rounded-lg border-2 max-w-96 px-3 duration-300 transition-all ${
+            className={`relative p-6 rounded-lg border-2 max-w-96 px-3 duration-300 transition-all bg-white ${
               hoveredIndex !== null && hoveredIndex !== index
                 ? "opacity-30"
                 : "opacity-100 hover:scale-110 "

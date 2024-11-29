@@ -1,5 +1,54 @@
 
 TODO
+
+
+// ===== Login Controller =====
+export const loginController = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await User.findOne({ email });
+    if (!user)
+      return res
+        .status(400)
+        .json({ success: false, msg: "Invalid Credentials" });
+    const isPassCorrect = await bcryptjs.compare(password, user.password);
+    if (!isPassCorrect)
+      return res
+        .status(400)
+        .json({ success: false, msg: "Invalid Credentials" });
+
+    generateTokenAndSetCookie(res, user._id);
+
+    user.lastLogin = new Date();
+    await user.save();
+
+    res.status(200).json({
+      success: true,
+      msg: "Logged in successfully!",
+      user: {
+        ...user._doc,
+        password: undefined,
+      },
+    });
+  } catch (error) {
+    console.log("Error in loginController → ", error);
+    res.status(400).json({ msg: error.message, success: false });
+  }
+};
+ 
+export const testUserLogin = async (req,res) => {
+  //..... code here - similar to login controller
+  // user email - 
+}
+
+I want to create an api where user can click on a button and will able to sign in a test user without  providing the credentials
+
+
+
+
+
+
+
  - verified user Instat remove the link verify now 
  - display all users (verified ? blue tick)
  - add images and the website from where they generated the image

@@ -23,14 +23,14 @@ const Footer = () => {
 
         <p className="text-sm mb-4">2024 All rights reserved.</p>
         <div className="flexCenter space-x-4 mt-4 text-xs">
-          <a href="#" className={footerLinkCss}>
-            Privacy Policy
+          <a href="https://github.com/Githubak2002" className={footerLinkCss} target="_blank">
+            GitHub
           </a>
-          <a href="#" className={footerLinkCss}>
-            Terms of Service
+          <a href="https://github.com/Githubak2002/ai-quiz-mern" className={footerLinkCss} target="_blank">
+            Source Code
           </a>
-          <a href="#" className={footerLinkCss}>
-            Contact Us
+          <a href="https://linkedin.com/in/anuraglohar" className={footerLinkCss} target="_blank">
+            LinkedIn
           </a>
         </div>
       </div>
