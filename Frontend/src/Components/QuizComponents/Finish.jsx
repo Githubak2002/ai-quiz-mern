@@ -19,7 +19,7 @@ const Finish = ({score,maxScore,dispatch}) => {
 
 
       {/* ==== Restart ==== */}
-      <button onClick={() => dispatch({type:"restart"})} className=' p-2 border border-black rounded-xl'>Restart the quiz</button>
+      <button onClick={() => dispatch({type:"restart"})} className='hover-cursorCSS  p-2 border border-black rounded-xl'>Restart the quiz</button>
 
       {/* <button onClick={allQuiz} className=' p-2 border border-black rounded-xl'>All Quiz</button> */}
     </div>

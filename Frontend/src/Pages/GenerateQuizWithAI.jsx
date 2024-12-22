@@ -93,7 +93,7 @@ const GenerateQuizWithAI = () => {
 
         <button
           type="submit"
-          className={`w-full text-white p-2 rounded-md transition duration-200 ${loading ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'}`}
+          className={`hover-cursorCSS w-full text-white p-2 rounded-md transition duration-200 ${loading ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'}`}
           disabled={loading} 
         >
           {loading ? 'Creating...' : 'Create Quiz'}

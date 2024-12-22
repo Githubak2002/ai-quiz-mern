@@ -37,7 +37,7 @@ const EnterEmailPoupup = () => {
           <div className="flexCenter gap-x-5">
             <button
               onClick={forgetPassHandler}
-              className={`text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 ${isLoading ? "bg-blue-300" : "bg-blue-500"} ` }
+              className={`hover-cursorCSS text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 ${isLoading ? "bg-blue-300" : "bg-blue-500"} ` }
               disabled={isLoading} 
             >
               { isLoading ? "Sending Email..." : "Submit"}
@@ -46,7 +46,7 @@ const EnterEmailPoupup = () => {
 
             <button
             onClick={cancelHandler}
-            className="py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-500"
+            className="hover-cursorCSS py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-500"
           >
             Cancel
           </button>

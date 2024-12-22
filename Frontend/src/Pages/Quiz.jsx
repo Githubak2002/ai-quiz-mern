@@ -139,7 +139,7 @@ const Quiz = ({ topic }) => {
             index === noOfQuest - 1 && (
               <button
                 onClick={() => dispatch({ type: "finish" })}
-                className="p-2 bg-blue-500 font-bold text-white rounded-lg mt-4 text-sm"
+                className="hover-cursorCSS p-2 bg-blue-500 font-bold text-white rounded-lg mt-4 text-sm"
               >
                 Finish the test
               </button>
