@@ -1,6 +1,8 @@
-# QuizifyAI
+# [QuizifyAI → live here](https://ai-quiz-mern.onrender.com/) ✨
 
 QuizifyAI — a quiz web application built using the MERN stack (MongoDB, Express, React, Node.js) with advanced JWT authentication and AI-generated quizzes through the Google Gemini API. This application allows users to take quizzes on various topics, generate quizzes using AI, and offers a secure and user-friendly experience.
+
+<img width="1099" alt="QuizifyAI" src="https://github.com/user-attachments/assets/5d7ce235-1493-449e-81a7-a52a9fb2bb87">
 
 ## Features
 
@@ -146,7 +148,6 @@ Use the "selector function" when you want to read state values - Example -
 ```javascript
 const isVisible = useAuthStore((state) => state.forgotPassPopup);
 ```
-<img width="1099" alt="QuizifyAI" src="https://github.com/user-attachments/assets/5d7ce235-1493-449e-81a7-a52a9fb2bb87">
 
 
 
